@@ -15,8 +15,8 @@
     <ScriptArguments>
     </ScriptArguments>
     <StartWebBrowser>True</StartWebBrowser>
-    <LaunchUrl>http://localhost:3000</LaunchUrl>
-    <NodejsPort>3000</NodejsPort>
+    <LaunchUrl>https://localhost:8443</LaunchUrl>
+    <NodejsPort>8443</NodejsPort>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
@@ -27,6 +27,7 @@
     <Content Include="bower.json" />
     <Content Include="jsconfig.json" />
     <None Include="manifest.xsd" />
+    <Content Include="makePKI.sh" />
     <Content Include="package.json" />
     <Content Include="tsconfig.json" />
     <Content Include="tsd.json" />
