@@ -75,3 +75,13 @@ $RECYCLE.BIN/
 *.lnk
 
 bower_components
+
+
+obj
+# bin
+
+**/bin/*.dll
+
+.ntvs_*
+
+.vs
