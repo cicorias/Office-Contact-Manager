@@ -43,10 +43,7 @@ function getContactAddRequest(givenName, surname, fileAs) {
 }
 
 
-
-
-
-function sendRequest() {
+function sendRequestViaEws() {
 
     var givenName = $('#givenName').val();
     var surname = $('#surname').val();

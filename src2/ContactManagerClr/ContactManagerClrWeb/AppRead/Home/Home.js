@@ -8,7 +8,7 @@
         $(document).ready(function () {
             app.initialize();
 
-            displayItemDetails();
+            //displayItemDetails();
 
             console.log('starting callbacks');
             Office.context.mailbox.getCallbackTokenAsync(tokenCallBack);
@@ -28,7 +28,8 @@
         }
         else {
             console.log(asyncResult.value);
-            $('#callbacktoken').html("EWS Bearer: " + asyncResult.value);
+            app.session.callbacktoken = asyncResult.value;
+            $('#callbacktoken').html(asyncResult.value);
         }
     }
 
@@ -38,7 +39,8 @@
         }
         else {
             console.log("Bearer " + asyncResult.value);
-            $('#identitytoken').html("Identity Token: " + asyncResult.value);
+            app.session.identitytoken = asyncResult.value;
+            $('#identitytoken').html(asyncResult.value);
         }
     }
 

@@ -22,8 +22,7 @@
 </head>
 <body>
     <div id="content-main">
-
-
+       
         <div class="padding">
             <div>
                 <label for="givenName">Given Name</label>
@@ -33,11 +32,12 @@
                 <label for="fileAs">File as</label>
                 <input type="text" id="fileAs" />
                 <br />
-                <input type="button" onclick="sendRequest();" title="send" />
+                <input type="button" onclick="sendRequestViaEws();" value="Via EWS" />
+                <input type="button" onclick="sendRequestViaServer();" value="Via Server" />
             </div>
             <div>
-                <div><div id="callbacktoken"></div></div>
-                <div><div id="identitytoken"></div></div>
+                <div>CallBackToken: <span id="callbacktoken"></span></div>
+                <div>IdentityToken: <span id="identitytoken"></span></div>
                 <div>Go here to decipher: <a target="_blank" href="http://jwt.io/">http://jwt.io/</a></div>
             </div>
 

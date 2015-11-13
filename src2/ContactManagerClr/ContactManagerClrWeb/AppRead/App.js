@@ -5,6 +5,8 @@ var app = (function () {
 
     var app = {};
 
+    app.session = new Object();
+
     // Common initialization function (to be called from each page)
     app.initialize = function () {
         $('body').append(
