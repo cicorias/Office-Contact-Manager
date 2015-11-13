@@ -2,12 +2,12 @@
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MailApp">
   <Id>c7065be2-0fbb-476f-8aed-aeaddca2932a</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>[Provider name]</ProviderName>
+  <ProviderName>DX TED Partner Catalyst</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Contact Manager"/>
-  <Description DefaultValue="[Task pane Add-in description]"/>
-  <HighResolutionIconUrl DefaultValue="[Icon URL]"/>
-  <SupportUrl DefaultValue="[Support URL]"/>
+  <Description DefaultValue="Demonstrates creating a Contact"/>
+  <HighResolutionIconUrl DefaultValue="https://github.com/CatalystCode/case-studies/blob/gh-pages/images/logo.png"/>
+  <SupportUrl DefaultValue="http://aka.ms/partnercatalyst"/>
   <AppDomains>
     <AppDomain>https://login.windows.net</AppDomain>
     <AppDomain>https://login.microsoftonline.net</AppDomain>

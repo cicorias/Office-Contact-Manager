@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title></title>
+    <script src="../../Scripts/jquery-1.9.1.js" type="text/javascript"></script>
+
+    <link href="../../Content/Office.css" rel="stylesheet" type="text/css" />
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+
+    <!-- To enable offline debugging using a local reference to Office.js, use:                        -->
+    <!-- <script src="../../Scripts/Office/MicrosoftAjax.js" type="text/javascript"></script>  -->
+    <!-- <script src="../../Scripts/Office/1/office.js" type="text/javascript"></script>  -->
+
+    <link href="../App.css" rel="stylesheet" type="text/css" />
+    <script src="../App.js" type="text/javascript"></script>
+
+    <link href="Home.css" rel="stylesheet" type="text/css" />
+    <script src="Home.js" type="text/javascript"></script>
+    <script src="EwsHelper.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="content-main">
+
+
+        <div class="padding">
+            <div>
+                <label for="givenName">Given Name</label>
+                <input type="text" id="givenName" />
+                <label for="surname">Surname</label>
+                <input type="text" id="surname" />
+                <label for="fileAs">File as</label>
+                <input type="text" id="fileAs" />
+                <br />
+                <input type="button" onclick="sendRequest();" title="send" />
+            </div>
+            <div>
+                <div><div id="callbacktoken"></div></div>
+                <div><div id="identitytoken"></div></div>
+                <div>Go here to decipher: <a target="_blank" href="http://jwt.io/">http://jwt.io/</a></div>
+            </div>
+
+            
+        </div>
+    </div>
+    <div id="content-footer">
+        <div class="padding">
+            <a target="_blank" href="https://go.microsoft.com/fwlink/?LinkId=276814">Find more samples online...</a>
+        </div>
+    </div>
+</body>
+</html>

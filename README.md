@@ -25,6 +25,27 @@ Import-Certificate "./public.cer" -CertStoreLocation "Cert:\CurrentUser\root"
 ```
 
 
+## Ensure you have App setup in AAD
+### Register as a Web App / Web API
+record the ClientID and ClientSecret
+
+Review this about ensuring OAuth 2.0 Implict grant flow is allowed:
+
+https://msdn.microsoft.com/office/office365/HowTo/add-common-consent-manually#bk_RegisterWebApp 
+
+```json
+  "keyCredentials": [],
+  "knownClientApplications": [],
+  "logoutUrl": null,
+  "oauth2AllowImplicitFlow": true,
+  "oauth2AllowUrlPathMatching": false,
+  "oauth2Permissions": [
+```
+
+
+## Tips on Graph and O365 Preview API
+Look here for latest: https://graph.microsoft.com/beta/$metadata 
+
 
 ## Run site Using Visual Studio
 There is a project file for use in VS 2015 along with the NodeJS tools for Visual Studio.

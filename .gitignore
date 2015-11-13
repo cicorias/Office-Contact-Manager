@@ -81,6 +81,16 @@ obj
 # bin
 
 **/bin/*.dll
+**/bin/Debug/*
+**/bin/*.pdb
+**/bin/*.xml
+**/bin/*.config
+**/bin/roslyn/*
+**/packages/*
+
+
+*.user
+
 
 .ntvs_*
 
@@ -88,3 +98,5 @@ obj
 
 *.pem
 *.cer
+
+**/.vs/*

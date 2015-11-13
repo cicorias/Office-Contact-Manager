@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManagerClr", "ContactManagerClr\ContactManagerClr.csproj", "{448D5541-A9ED-4860-AA80-AA5E747A063B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManagerClrWeb", "ContactManagerClrWeb\ContactManagerClrWeb.csproj", "{48EF974D-231F-4959-8FC6-046CC5AD8026}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{448D5541-A9ED-4860-AA80-AA5E747A063B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{448D5541-A9ED-4860-AA80-AA5E747A063B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{448D5541-A9ED-4860-AA80-AA5E747A063B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{448D5541-A9ED-4860-AA80-AA5E747A063B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{448D5541-A9ED-4860-AA80-AA5E747A063B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{448D5541-A9ED-4860-AA80-AA5E747A063B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{48EF974D-231F-4959-8FC6-046CC5AD8026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48EF974D-231F-4959-8FC6-046CC5AD8026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48EF974D-231F-4959-8FC6-046CC5AD8026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48EF974D-231F-4959-8FC6-046CC5AD8026}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
