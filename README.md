@@ -15,6 +15,11 @@ Review the following MSDN content:
 * [CreateItem operation (contact)](https://msdn.microsoft.com/en-us/library/office/aa580529.aspx)
 
 
+### For the Unified API Metadata
+While not used here, note that the Unified API $metadata provides the EDM
+https://outlook.office.com/api/beta/$metadata
+https://outlook.office.com/api/v1.0/$metadata
+
 ### Permissions
 This addin as it calls the EWS SOAP endpoint, requires the permission as follows in the manfifest:
 

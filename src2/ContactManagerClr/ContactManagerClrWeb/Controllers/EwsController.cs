@@ -1,4 +1,15 @@
-﻿using Microsoft.Exchange.WebServices.Auth.Validation;
+﻿/*
+ read https://social.msdn.microsoft.com/Forums/exchange/en-US/1f5e09f3-2284-40d5-865b-69464e069d0e/e2013exchangeonline-ewsma-c-win7win-server-20072010-oauth-authentication-for-exchange
+
+ this shows how to use a clientid to get a token for the app.
+
+ https://social.msdn.microsoft.com/Forums/office/en-US/47597ae0-a1f7-4b3a-a374-4bc2dddb90c7/pass-credentials-or-token-from-mail-app-to-webserver-to-use-with-ews-managed-api-exchangeservice
+
+ PII: https://msdn.microsoft.com/en-us/library/office/fp161165.aspx 
+
+*/
+
+using Microsoft.Exchange.WebServices.Auth.Validation;
 using Microsoft.Exchange.WebServices.Data;
 using System;
 using System.Collections.Generic;
@@ -36,6 +47,38 @@ namespace ContactManagerClrWeb.Controllers
                     Url = new Uri(capturedEmailMessage.EWSUrl),
                     Credentials = new OAuthCredentials(capturedEmailMessage.EmailToken)
                 };
+
+                // load the complete email message to scrape the necessary information required for the capture
+                var emailMessage = EmailMessage.Bind(service, new ItemId(capturedEmailMessage.ItemId));
+                emailMessage.Load();
+                var attachmentCount = emailMessage.Attachments.Count;
+
+
+
+
+
+                Contact contact = new Contact(service)
+                {
+                    GivenName = "foo",
+                    Surname = "bar",
+                    FileAs = "foobar"
+                };
+
+
+                //var manf = service.GetAppManifests();
+
+                //var catr = new ClientAccessTokenRequest(null, ClientAccessTokenType.CallerIdentity);
+                //service.GetClientAccessToken(new ClientAccessTokenRequest[] { catr });
+
+                ////var fi = service.FindItems(WellKnownFolderName.Contacts, ViewFilter.All);
+
+                List<Item> items = new List<Item>();
+                items.Add(contact);
+
+                service.CreateItems(items, WellKnownFolderName.Contacts, null, null);
+
+
+
             }
             catch (Exception ex)
             {

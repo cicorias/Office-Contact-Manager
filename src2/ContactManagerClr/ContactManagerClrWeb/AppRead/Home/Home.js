@@ -10,6 +10,8 @@
 
             //displayItemDetails();
 
+            app.session.ewsUrl = Office.context.mailbox.ewsUrl;
+
             console.log('starting callbacks');
             Office.context.mailbox.getCallbackTokenAsync(tokenCallBack);
             Office.context.mailbox.getUserIdentityTokenAsync(userIdentityCallback);
