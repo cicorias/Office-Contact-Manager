@@ -30,6 +30,10 @@
             console.log(asyncResult.value);
             app.session.callbacktoken = asyncResult.value;
             $('#callbacktoken').html(asyncResult.value);
+            console.log('done set1');
+            var jwt = jwt_decode(asyncResult.value);
+            $('#callbacktokenjwt').html(JSON.stringify(jwt,null, 2));
+            console.log('done decode');
         }
     }
 
@@ -40,7 +44,12 @@
         else {
             console.log("Bearer " + asyncResult.value);
             app.session.identitytoken = asyncResult.value;
+            console.log('done set2');
             $('#identitytoken').html(asyncResult.value);
+
+            var jwt = jwt_decode(asyncResult.value);
+
+            $('#identitytokenjwt').html(JSON.stringify(jwt,null, 2));
         }
     }
 

@@ -1,4 +1,8 @@
-﻿
+﻿/* 
+* These make a call to EWS direct from the client side JavaScript
+* making use of the 'mailbox.makeEwsRequestAsync' function in the Office JS library
+*/
+
 function getContactAddRequest(givenName, surname, fileAs) {
     // Return a GetItem operation request for the subject of the specified item. 
     var result =
@@ -62,6 +66,7 @@ function soapCallback(asyncResult) {
     var result = asyncResult.value;
     console.log(asyncResult.value);
     var context = asyncResult.context;
+
 
 
 
